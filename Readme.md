@@ -56,19 +56,9 @@ Use the following command line:
 python train.py --cfg <path-to-network.yaml> --data <path-to-dataset.yaml> --hyp <path-to-hyperparams.yaml> --project <path-to-save> --name <exp_name> --epochs <epochs>
 ```
 
-Please make sure that the \<name\> dataset has been located in `./datasets/<name>`. The dataset folder should be organized as:
-\<name\>
-　　├─infrared
-　　│　　├─test
-　　│　　└─train
-　　├─visible
-　　│　　├─test
-　　│　　└─train
-　　└─labels
-　　　　├─test
-　　　　└─train
+Please make sure that the \<name\> dataset has been located in `./datasets/<name>` first. 
 
-For example, if you want to train our model on Aligned-FLIR dataset, use:
+After that, if you want to train our model on Aligned-FLIR dataset, use:
 ```shell
 python train.py --cfg ./models/transformer/yolov5l_Transfusion_FLIR_DeformDotAttnLocal.yaml --data ./data/multispectral/FLIR-align-3class.yaml --hyp ./data/hyp.scratch_FLIR.yaml --project saves/FLIR_DeformCrossAttn --name DeformCAT --epochs 15
 ```
