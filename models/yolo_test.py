@@ -22,11 +22,6 @@ try:
 except ImportError:
     thop = None
 
-_MSDA = True
-try:
-    from models.common import DeformTransformerFusionBlock
-except ImportError:
-    _MSDA = False
 
 class Detect(nn.Module):
     stride = None  # strides computed during build
@@ -349,11 +344,7 @@ def parse_model(d, ch):  # model_dict, input_channels(3)
             c1 = sum([ch[x] for x in f])
             c2 = c1 // 2
             args = [c1, c2, *args]
-        elif (m is ConvFusionBlock) or (m is ConvGLUFusionBlock) or (m is DeformScaledDotTransformerFusionBlockLocal) or \
-                        (m is DeformScaledDotTransformerFusionBlock): 
-            c2 = ch[f[0]]
-            args = [c2, *args[1:]]
-        elif _MSDA and ((m is DeformConcatTransformerFusionBlock) or (m is DeformTransformerFusionBlock)):
+        elif m is DeformScaledDotTransformerFusionBlockLocal: 
             c2 = ch[f[0]]
             args = [c2, *args[1:]]
         else:
