@@ -133,7 +133,7 @@ We have been working on optimizing the hyperparamters for each dataset. The foll
 |     Truck     |     85.29    |     48.73    |     56.26    |     33.94    |     33.43    |
 |     Lamp      |     76.85    |     62.43    |     65.62    |     55.71    |     47.38    |
 
-Comparasion with other -zxSplit baselines:
+Comparison with other -zxSplit baselines:
 |                   | AP50 (%)     | AP75 (%)     | AP50:95 (%)  |
 |-------------------|--------------|--------------|--------------|
 |        EME        |  66.23±0.40  |     -        |  41.10±0.29  |
