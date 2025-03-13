@@ -1,0 +1,14 @@
+
+
+# train and val data as 1) directory: path/images/, 2) file: path/images.txt, or 3) list: [path1/images/, path2/images/]
+path: ./datasets/M3FD_Detection
+train_rgb: ./datasets/M3FD_Detection/visible/train  # 128 images
+val_rgb: ./datasets/M3FD_Detection/visible/test  # 128 images
+train_ir: ./datasets/M3FD_Detection/infrared/train  # 128 images
+val_ir: ./datasets/M3FD_Detection/infrared/test  # 128 images
+
+# number of classes
+nc: 6
+
+# class names
+names: ['people', 'car', 'bus', 'motorcycle', 'truck', 'lamp']

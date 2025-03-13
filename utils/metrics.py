@@ -15,6 +15,8 @@ def fitness(x, name):
         w = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0]  # weights for [tp[0], fp[0], fn[0], f1[0], mp, mr, map50, map]
     elif 'llvip' in name: # LLVIP
         w = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0]
+    elif 'm3fd' in name: # M3FD
+        w = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.5, 0.5]
     else:
         raise NotImplementedError
     return (x[:, :8] * w).sum(1)

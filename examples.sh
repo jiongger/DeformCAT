@@ -9,3 +9,6 @@ python train.py --cfg ./models/transformer/yolov5l_Transfusion_kaist_DeformDotAt
 
 # LLVIP
 python train.py --cfg ./models/transformer/yolov5l_Transfusion_LLVIP_DeformDotAttnLocal.yaml --data ./data/multispectral/LLVIP.yaml --hyp ./data/hyp.scratch_LLVIP.yaml --project saves/LLVIP_DeformCrossAttn --name DeformCAT --epochs 30
+
+# M3FD
+python train.py --cfg ./models/transformer/yolov5l_Transfusion_M3FD_DeformDotAttnLocal.yaml --data ./data/multispectral/M3FD.yaml --hyp ./data/hyp.scratch_M3FD.yaml --project saves/M3FD_DeformCrossAttn --name DeformCAT --epochs 30

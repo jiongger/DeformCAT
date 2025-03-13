@@ -2,6 +2,9 @@
 
 Repo for paper "Deformable Cross-Attention Transformer for Weakly Aligned RGB-T Pedestrian Detection", IEEE transactions on Multimedia, by Y. Hu, X. Chen, S. Wang, L. Liu, H. Shi, L. Fan, J. Tian, and J. Liang.
 
+## Updates
+[2025/3/13] - Add results and weights for M3FD (with [zxSplit](https://github.com/XueZ-phd/Efficient-RGB-T-Early-Fusion-Detection)) dataset.
+
 ## Preparation
 
 ```shell
@@ -33,6 +36,9 @@ KAIST.zip: [[Google Drive](https://drive.google.com/file/d/16oVUixMBg5nD9cen101n
 #### LLVIP:
 LLVIP.zip: [[Google Drive](https://drive.google.com/file/d/1n4Le8IRxVdjVdIkHMPNp4pBHP9oQRxG2/view?usp=sharing)][[OneDrive](https://1drv.ms/u/s!AgRuCSN9dTG3loxZKnYoYm299exzcw?e=7eIPqb)]
 
+#### M3FD:
+M3FD.zip: [[OneDrive](https://1drv.ms/u/c/b731757d23096e04/EYK3jqQuFRpBr-72ZYhWLswB3flXgW-LHvVUhYc9_sbISA?e=SyJ9VW)]
+
 ### Weights
 
 We provide pre-trained model for the FLIR, CVC-14, KAIST, and LLVIP datasets.
@@ -48,6 +54,9 @@ DeformCAT-KAIST.pt: [[Google Drive](https://drive.google.com/file/d/14QhME0rOiS6
 
 #### LLVIP:
 DeformCAT-LLVIP.pt: [[Google Drive](https://drive.google.com/file/d/1xM5wEzp0-l12sj7c0TfEOaoS9bz_eQZa/view?usp=sharing)][[OneDrive](https://1drv.ms/u/s!AgRuCSN9dTG3lo07ylGvQcdKjhe33g?e=bELkn3)]
+
+#### M3FD:
+DeformCAT-M3FD.pt: [[OneDrive](https://1drv.ms/u/c/b731757d23096e04/EejDSlL0WhxGq-cK-44BRQsB2ziBlk-NiAp3V4FmsFJsPw?e=Sb4uKx)]
 
 ## Train
 
@@ -111,6 +120,26 @@ We have been working on optimizing the hyperparamters for each dataset. The foll
 |               | P (%)        | R (%)        | AP50 (%)     | AP75 (%)     | AP50:95 (%)  |
 |---------------|--------------|--------------|--------------|--------------|--------------|
 |     All       |     97.03    |     94.79    |     97.82    |     77.07    |     66.13    |
+
+#### M3FD:
+
+|               | P (%)        | R (%)        | AP50 (%)     | AP75 (%)     | AP50:95 (%)  |
+|---------------|--------------|--------------|--------------|--------------|--------------|
+|     All       |     84.05    |     66.63    |     73.28    |     49.79    |     46.49    |
+|     Person    |     89.45    |     73.31    |     79.95    |     47.20    |     46.16    |
+|     Car       |     86.33    |     83.96    |     89.48    |     68.36    |     62.36    |
+|     Bus       |     81.73    |     71.17    |     80.23    |     68.72    |     58.45    |
+|  Motorcycle   |     82.86    |     60.17    |     68.13    |     24.81    |     31.14    |
+|     Truck     |     85.29    |     48.73    |     56.26    |     33.94    |     33.43    |
+|     Lamp      |     76.85    |     62.43    |     65.62    |     55.71    |     47.38    |
+
+Comparasion with other -zxSplit baselines:
+|                   | AP50 (%)     | AP75 (%)     | AP50:95 (%)  |
+|-------------------|--------------|--------------|--------------|
+|        EME        |  66.23±0.40  |     -        |  41.10±0.29  |
+|       TFDet       |     64.8     |     -        |     41.0     |
+|  DeformCAT(ours)  |     77.28    |     49.79    |     46.49    |
+
 
 ## Citation
 If you find our work useful for your research, please consider citing our paper.
