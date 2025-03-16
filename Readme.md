@@ -41,7 +41,7 @@ M3FD.zip: [[OneDrive](https://1drv.ms/u/c/b731757d23096e04/EYK3jqQuFRpBr-72ZYhWL
 
 ### Weights
 
-We provide pre-trained model for the FLIR, CVC-14, KAIST, and LLVIP datasets.
+We provide pre-trained model for the FLIR, CVC-14, KAIST, LLVIP, and M3FD datasets.
 
 #### FLIR:
 DeformCAT-FLIR.pt [[Google Drive](https://drive.google.com/file/d/1vK2OxUdWEEdimB5_5m2nuA25firHH7Lm/view?usp=sharing)][[OneDrive](https://1drv.ms/u/s!AgRuCSN9dTG3lo0gSlKGKOvdeCXCMQ?e=wqkINJ)]
