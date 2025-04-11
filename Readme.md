@@ -77,11 +77,11 @@ Command lines for training can be found in `./examples.sh`
 ## Evaluation
 Use the following command line to evaluate your trained model:
 ```shell
-python train.py --weights <path-to-save>/<exp_name>/weights/best.pt --data <path-to-dataset.yaml>
+python test.py --weights <path-to-save>/<exp_name>/weights/best.pt --data <path-to-dataset.yaml>
 ```
 For example, if you want to evaluate your model trained with the above command line, use:
 ```shell
-python train.py --weights ./saves/FLIR_DeformCrossAttn/DeformCAT/weights/best.pt --data ./data/multispectral/FLIR-align-3class.yaml
+python test.py --weights ./saves/FLIR_DeformCrossAttn/DeformCAT/weights/best.pt --data ./data/multispectral/FLIR-align-3class.yaml
 ```
 
 If you want to evaluate our pre-trained weights for the KAIST dataset, use:
