@@ -138,7 +138,7 @@ Comparison with other -zxSplit baselines:
 |-------------------|--------------|--------------|--------------|
 |        EME        |  66.23±0.40  |     -        |  41.10±0.29  |
 |       TFDet       |     64.8     |     -        |     41.0     |
-|  DeformCAT(ours)  |     77.28    |     49.79    |     46.49    |
+|  DeformCAT(ours)  |     73.28    |     49.79    |     46.49    |
 
 
 ## Citation
