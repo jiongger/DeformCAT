@@ -129,9 +129,9 @@ We have been working on optimizing the hyperparamters for each dataset. The foll
 |     Person    |     89.45    |     73.31    |     79.95    |     47.20    |     46.16    |
 |     Car       |     86.33    |     83.96    |     89.48    |     68.36    |     62.36    |
 |     Bus       |     81.73    |     71.17    |     80.23    |     68.72    |     58.45    |
-|  Motorcycle   |     82.86    |     60.17    |     68.13    |     24.81    |     31.14    |
-|     Truck     |     85.29    |     48.73    |     56.26    |     33.94    |     33.43    |
-|     Lamp      |     76.85    |     62.43    |     65.62    |     55.71    |     47.38    |
+|     Lamp      |     82.86    |     60.17    |     68.13    |     24.81    |     31.14    |
+|     Motocycle |     85.29    |     48.73    |     56.26    |     33.94    |     33.43    |
+|     Truck     |     76.85    |     62.43    |     65.62    |     55.71    |     47.38    |
 
 Comparison with other -zxSplit baselines:
 |                   | AP50 (%)     | AP75 (%)     | AP50:95 (%)  |

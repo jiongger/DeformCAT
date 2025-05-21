@@ -11,4 +11,4 @@ val_ir: ./datasets/M3FD_Detection/infrared/test  # 128 images
 nc: 6
 
 # class names
-names: ['people', 'car', 'bus', 'motorcycle', 'truck', 'lamp']
+names: ['person', 'car', 'bus', 'lamp', 'motorcycle', 'truck']
