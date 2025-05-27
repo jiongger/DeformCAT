@@ -111,7 +111,9 @@ def test(data,
 
     seen = 0
     confusion_matrix = ConfusionMatrix(nc=nc)
-    names = {k: v for k, v in enumerate(model.names if hasattr(model, 'names') else model.module.names)}
+    with open(opt.data) as f:
+        data_dict = yaml.safe_load(f)  # data dict
+    names = {k: v for k, v in enumerate(data_dict['names'])}
     coco91class = coco80_to_coco91_class()
     if nc == 1:
         s = ('%20s' + '%8s' * 9 + '%9s' + '%12s') % ('Class', 'Images', 'Labels', 'TP', 'FP', 'FN', 'F1', 'P', 'R', 'mAP@.5', 'mAP@.75', 'mAP@.5:.95')  # 设置进度条的显示信息
@@ -442,10 +444,6 @@ if __name__ == '__main__':
     print(opt.data)
     check_requirements()
 
-    p = "./datasets/" + os.path.split(opt.data)[1].split('.')[0] + "/labels/test"
-    print(p)
-    labels_list = os.listdir(p)
-    labels_list.sort()
     if opt.data in ['./data/multispectral/FLIR-align-3class.yaml', './data/multispectral/FLIR-ADAS.yaml', './data/multispectral/VEDAI.yaml']:
         opt.verbose = True
 
@@ -455,6 +453,10 @@ if __name__ == '__main__':
         DAY_NIGHT_SPLIT = data_dict['day_night_split']
     else:
         DAY_NIGHT_SPLIT = None
+    p = data_dict['path'] + "/labels/test"
+    print(p)
+    labels_list = os.listdir(p)
+    labels_list.sort()
 
     if opt.task in ('train', 'val', 'test'):  # run normally
         test(opt.data,
