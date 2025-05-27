@@ -36,9 +36,9 @@ backbone:
    [-1, 1, SPPF, [1024, 5]],  # 19
 
     ######### Fusion Block #############
-   [[4, 14], 1, DeformScaledDotTransformerFusionBlockLocal, [256, 8, 4, 3, 1, rgb+t, 0.1, 0.1, 4, False, True, table]],    # 20 DeformScaledDotTransformerFusionBlockLocal@P3/8
-   [[6, 16], 1, DeformScaledDotTransformerFusionBlockLocal, [512, 8, 4, 3, 1, rgb+t, 0.1, 0.1, 4, False, True, table]],    # 21 DeformScaledDotTransformerFusionBlockLocal@P4/16
-   [[9, 19], 1, DeformScaledDotTransformerFusionBlockLocal, [1024, 8, 4, 3, 1, rgb+t, 0.1, 0.1, 4, False, True, table]],   # 22 DeformScaledDotTransformerFusionBlockLocal@P5/32
+   [[4, 14], 1, DeformScaledDotTransformerFusionBlockLocal, [256, 8, 4, 3, 1, 0.1, 0.1, 4, False]],    # 20 DeformScaledDotTransformerFusionBlockLocal@P3/8
+   [[6, 16], 1, DeformScaledDotTransformerFusionBlockLocal, [512, 8, 4, 3, 1, 0.1, 0.1, 4, False]],    # 21 DeformScaledDotTransformerFusionBlockLocal@P4/16
+   [[9, 19], 1, DeformScaledDotTransformerFusionBlockLocal, [1024, 8, 4, 3, 1, 0.1, 0.1, 4, False]],   # 22 DeformScaledDotTransformerFusionBlockLocal@P5/32
   ]
 
 
