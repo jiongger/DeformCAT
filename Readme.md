@@ -114,6 +114,7 @@ We have been working on optimizing the hyperparamters for each dataset. The foll
 |     MR-All     |     MR-Day     |     MR-Night     |    MR-Near    |     MR-Medium    |     MR-Far      |     MR-None     |     MR-Partial    |     MR-Heavy    |
 |-------------|-------------|--------------|-------------|---------------|--------------|--------------|----------------|--------------|
 |     6.06    |     8.05    |     2.77     |     0.01    |     12.19     |     33.55    |     19.01    |     22.19      |     45.48    |
+
 Evaluation results (.txt): [[OneDrive](https://1drv.ms/u/c/b731757d23096e04/EUyBZVGP3XdAmCDtWqMv3-EBjnJqi3sc553Det4B6fPGfQ)]
 
 #### LLVIP:
